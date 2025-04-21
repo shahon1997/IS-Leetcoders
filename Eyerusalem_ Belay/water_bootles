@@ -1,0 +1,17 @@
+class Solution {
+    public:
+        int numWaterBottles(int numBottles, int numExchange) {
+            int h;
+    int r;
+        if(numBottles<numExchange){
+            return numBottles;
+        }
+            if( numBottles==numExchange||numBottles==numExchange+1){
+    return {numBottles+1};
+            }
+    
+             h=numBottles/numExchange;
+             r=h/numExchange;
+            return {numBottles+h+r+1};
+        }
+    };
